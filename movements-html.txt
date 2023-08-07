@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Draw the robot's path</title>
+        <style>
+            
+            #canvas{
+                background-color: #4c4d4e;
+                border: 3px solid #81b2ca;
+               
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1 >Draw the robot's path</h1>
+           </center>
+<center>
+
+
+            <button id="moveForward">FORWARD</button>
+            <button id="moveBackward">BACKWARD</button>
+            <button id="moveRight">RIGHT</button>
+            <button id="moveLeft">LEFT</button>
+        </center>
+        </div>
+        <center>
+
+       
+        <canvas id="canvas" width="850" height="650"></canvas>
+    </center>
+        <script src="script2.js"></script>
+       
+          
+    </body>
+    
+      
+</html>

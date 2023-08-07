@@ -1,0 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+  
+    function drawPath(X1, Y1, X2, Y2) {
+      context.beginPath();
+      context.moveTo(X1, Y1);
+      context.lineTo(X2, Y2);
+      context.stroke();
+    }
+  
+    const Forward = document.getElementById('moveForward');
+    Forward.addEventListener('click', function() {
+      drawPath(400, 300, 400, 100);
+    });
+  
+    const Right = document.getElementById('moveRight');
+    Right.addEventListener('click', function() {
+      drawPath(400, 300, 600, 300);
+    });
+  
+    const Left = document.getElementById('moveLeft');
+    Left.addEventListener('click', function() {
+      drawPath(400, 300, 200, 300);
+    });
+  
+    const Backward = document.getElementById('moveBackward');
+    Backward.addEventListener('click', function() {
+      drawPath(400, 300, 400, 500);
+    });
+  });
+  
+  
+  
+  function savePath() {
+     var direction = document.getElementById("direction").value;
+     var distance = document.getElementById("distance").value;
+  
+     var Data = new Data();
+     Data.append("direction", direction);
+     Data.append("distance", distance);
+  
+     fetch("path.php", {
+        method: "POST",
+        body: formData
+     })
+     .then(response => response.text())
+     .then(result => {
+        console.log(result);
+      
+     })
+     .catch(error => console.log(error));
+  }
+
+  
